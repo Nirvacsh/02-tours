@@ -252,6 +252,22 @@ ul {
 }
 /* ============= PROJECT CSS =============== */
 
+.loading {
+  width: 6rem;
+  height: 6rem;
+  border: 5px solid var(--grey-400);
+  border-radius: 50%;
+  margin: 0 auto;
+  border-top-color: var(--primary-500);
+  animation: spinner 1s liner infinite;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 main {
   width: 90vw;
   max-width: var(--max-width);
@@ -265,7 +281,7 @@ main {
 }
 
 .single-tour {
-  background: var(--white);
+  background-color: var(--white);
   border-radius: var(--borderRadius);
   box-shadow: var(--shadow-1);
   transition: var(--transition);
@@ -283,7 +299,7 @@ main {
   padding: 0.5rem;
   color: var(--white);
   letter-spacing: var(--letterSpacing);
-  background: var(--primary-500);
+  background-color: var(--primary-500);
   border-top-right-radius: var(--borderRadius);
 }
 .single-tour .img {
@@ -302,18 +318,21 @@ main {
   font-weight: 500;
   line-height: 1.5;
 }
+
 .tour-info p {
   margin-bottom: 1.25rem;
   line-height: 1.5;
   color: var(--grey-500);
 }
+
 .info-btn,
 .delete-btn {
-  background: transparent;
-  border: transparent;
+  background-color: transparent;
   text-transform: capitalize;
+  border: transparent;
   cursor: pointer;
 }
+
 .info-btn {
   color: var(--primary-500);
   font-weight: 600;
@@ -323,6 +342,7 @@ main {
   border: 1px solid var(--primary-500);
   color: var(--primary-500);
 }
+
 .delete-btn:hover {
   background: var(--primary-500);
   color: var(--white);
@@ -334,8 +354,10 @@ main {
     align-items: start;
   }
 }
+
 @media screen and (min-width: 992px) {
   .tours {
     grid-template-columns: 1fr 1fr 1fr;
+    align-items: start;
   }
 }
